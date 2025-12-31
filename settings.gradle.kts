@@ -110,11 +110,7 @@ if (FDroidConfig.hasRead && FDroidConfig.isFDroidBuild) {
 
     project.setProperty("version", simpleVersion)
   }
-} else if(isGitRepo) {
-  apply {
-    plugin("com.mooltiverse.oss.nyx")
-  }
-}
+} 
 
 rootProject.name = "AndroidIDE"
 
@@ -219,3 +215,4 @@ object FDroidConfig {
     fDroidVersionCode =  properties.getProperty(PROP_FDROID_BUILD_VERCODE, null)?.toInt()
   }
 }
+
